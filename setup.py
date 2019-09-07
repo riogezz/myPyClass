@@ -8,7 +8,7 @@ with open('HISTORY.md') as history_file:
 
 setup_args = dict(
     name='rUtils',
-    version='0.0.1',
+    version='0.0.4',
     description='my general tools',
     long_description_content_type="text/markdown",
     long_description=README + '\n\n' + HISTORY,
@@ -25,7 +25,6 @@ install_requires = [
     'schedule',
     'munch',
     'PyYAML'
-
 ]
 
 if __name__ == '__main__':
