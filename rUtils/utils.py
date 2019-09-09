@@ -47,19 +47,23 @@ class utils():
 
     @staticmethod
     def applyFilter(inputA, filterlist):
-        output = []
-        if isinstance(inputA, dict):
-            inputlist = list(inputA.keys())
-        elif isinstance(inputA, list):
-            inputlist = inputA
-        else:
-            inputlist = list(inputA)
-        if isinstance(filterlist, str):
-            filterlist = list(filterlist)
-        for f in filterlist:
-            f1 = re.compile(f)
-            output.extend(list(filter(f1.match, inputlist)))
-        return output
+        try: 
+            output = []
+            if isinstance(inputA, dict):
+                inputlist = list(inputA.keys())
+            elif isinstance(inputA, list):
+                inputlist = inputA
+            else:
+                inputlist = list(inputA)
+            if isinstance(filterlist, str):
+                filterlist = list(filterlist)
+            for f in filterlist:
+                f1 = re.compile(f)
+                output.extend(list(filter(f1.match, inputlist)))
+            return output
+        except Exception as e:
+            logging.error("Error: "+str(e))
+            
 
     @staticmethod
     def loop(action, delay=1, argument=(), kwargs={}):
