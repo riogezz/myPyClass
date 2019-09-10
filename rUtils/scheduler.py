@@ -1,3 +1,10 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+
+"""
+scheduler class based on python schedule
+"""
+
 import sched
 import time
 import logging

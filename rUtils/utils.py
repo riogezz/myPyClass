@@ -1,3 +1,13 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+
+""" 
+general utils
+- load and munchify files 
+- filter list/dicts/strings
+- loop scheduling
+
+"""
 from munch import munchify
 from datetime import datetime
 import os.path
