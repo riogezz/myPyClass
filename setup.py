@@ -25,7 +25,8 @@ install_requires = [
     'schedule',
     'munch',
     'PyYAML',
-    'elasticsearch'
+    'elasticsearch',
+    'retrying'
 ]
 
 if __name__ == '__main__':
