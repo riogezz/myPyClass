@@ -38,7 +38,7 @@ class utils():
             with open(filename) as f:
                 return yaml.safe_load(f)
         except Exception as e:
-            logging.error("Error: "+str(e))
+            logging.error(str(e))
 
     @staticmethod
     def readJSON(filename):
@@ -46,14 +46,14 @@ class utils():
             with open(filename) as f:
                 return json.load(f)
         except Exception as e:
-            logging.error("Error: "+str(e))
+            logging.error(str(e))
     
     @staticmethod
     def convertedFile(filename):
         try:
             return munchify(__class__.readFile(filename))
         except Exception as e:
-            logging.error("Error: "+str(e))
+            logging.error(str(e))
 
     @staticmethod
     def applyFilter(inputA, filterlist):
@@ -72,7 +72,7 @@ class utils():
                 output.extend(list(filter(f1.match, inputlist)))
             return output
         except Exception as e:
-            logging.error("Error: "+str(e))
+            logging.error(str(e))
             
 
     @staticmethod
