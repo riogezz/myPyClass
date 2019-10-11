@@ -8,7 +8,7 @@ with open('HISTORY.md') as history_file:
 
 setup_args = dict(
     name='rUtils',
-    version='0.0.5',
+    version='0.0.6',
     description='my general tools',
     long_description_content_type="text/markdown",
     long_description=README + '\n\n' + HISTORY,
@@ -16,7 +16,7 @@ setup_args = dict(
     packages=find_packages(),
     author='Sergio Cricca',
     author_email='sergio.cricca@gmail.com',
-    keywords=['rUtils', 'utils', 'scheduler', 'elastic'],
+    keywords=['rUtils', 'utils', 'scheduler', 'elastic', 'splauto'],
     url='https://github.com/riogezz/myPyClass',
     download_url=''
 )

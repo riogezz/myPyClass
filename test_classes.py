@@ -1,4 +1,4 @@
-from myutils import utils, scheduler
+from rUtils import utils, scheduler
 
 conf = utils.readFile("test_setup.yaml")
 def myprint():
