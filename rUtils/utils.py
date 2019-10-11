@@ -24,6 +24,14 @@ class utils():
 
     @staticmethod
     def readFile(filename):
+        """
+        Reads a configuration file and outputs its content in munchify styleself.
+        Actually it could read YAML (yaml/yml extension) and JSON (json extension) ZipFile The class for reading and writing ZIP files.  See section 
+        
+        Parameters
+        ----------
+        filename : filename path
+        """
         extension = os.path.splitext(filename)[1][1:]
         if extension.lower() in ['yaml', 'yml']:
             return __class__.readYAML(filename)
@@ -74,7 +82,7 @@ class utils():
         except Exception as e:
             logging.error(str(e))
             
-
+            
     @staticmethod
     def loop(action, delay=1, argument=(), kwargs={}):
         try:

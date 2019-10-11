@@ -1,3 +1,4 @@
+- 0.0.7: fixed some bugs
 - 0.0.6: added splauto class for browser automation using splinter
 - 0.0.5: added elastic class
 - 0.0.2: fixed the way how to load the module
