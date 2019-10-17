@@ -109,7 +109,7 @@ class splauto(object):
         else:
             logging.critical(f"you are looking something without specifying any of <id>, <xpath>, <text>, <partial_text>")
 
-     
+
 class spaluto_commands(object):
 
     def __init__(self, filename):
