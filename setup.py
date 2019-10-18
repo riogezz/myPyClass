@@ -28,8 +28,7 @@ install_requires = [
     'elasticsearch',
     'retrying',
     'selenium',
-    'splinter',
-    'classechenonesiste'
+    'splinter'
 ]
 
 if __name__ == '__main__':
