@@ -27,7 +27,8 @@ install_requires = [
     'PyYAML',
     'elasticsearch',
     'retrying',
-    'selenium'
+    'selenium',
+    'splinter'
 ]
 
 if __name__ == '__main__':
