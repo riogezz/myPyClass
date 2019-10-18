@@ -1,0 +1,10 @@
+image: python:3
+
+stages:
+  - test-master
+
+# testing stage
+build-devel:
+  stage: test-master
+  script:
+    - python3 setup.py install
