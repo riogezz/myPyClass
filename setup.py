@@ -26,7 +26,8 @@ install_requires = [
     'munch',
     'PyYAML',
     'elasticsearch',
-    'retrying'
+    'retrying',
+    'selenium.webdriver.chrome.options'
 ]
 
 if __name__ == '__main__':
