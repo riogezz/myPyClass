@@ -27,7 +27,7 @@ install_requires = [
     'PyYAML',
     'elasticsearch',
     'retrying',
-    'selenium.webdriver.chrome.options'
+    'selenium'
 ]
 
 if __name__ == '__main__':
