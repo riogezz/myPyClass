@@ -1,3 +1,4 @@
+- 0.0.8: removed 'splauto' (splinter automation) from stable
 - 0.0.7: fixed some bugs
 - 0.0.6: added splauto class for browser automation using splinter
 - 0.0.5: added elastic class

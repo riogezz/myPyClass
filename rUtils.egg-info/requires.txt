@@ -1,0 +1,7 @@
+schedule
+munch
+PyYAML
+elasticsearch
+retrying
+selenium
+splinter

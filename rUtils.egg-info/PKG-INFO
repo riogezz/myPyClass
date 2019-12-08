@@ -1,0 +1,32 @@
+Metadata-Version: 2.1
+Name: rUtils
+Version: 0.0.7
+Summary: my general tools
+Home-page: https://github.com/riogezz/myPyClass
+Author: Sergio Cricca
+Author-email: sergio.cricca@gmail.com
+License: MIT
+Description: # rUtils
+        
+        ## Description:
+        - utils: general file utilities 
+        - scheduler: scheduler utils
+        - elastic: elasticsearch function collection
+        - splauto: browser automation using splinter
+        
+        ## How to install:
+        ``` python3 setup.py install ```
+        
+        **TODO:** 
+        - better documentation
+        - tests
+        
+        
+        - 0.0.7: fixed some bugs
+        - 0.0.6: added splauto class for browser automation using splinter
+        - 0.0.5: added elastic class
+        - 0.0.2: fixed the way how to load the module
+        - 0.0.1: base utils
+Keywords: rUtils,utils,scheduler,elastic,splauto
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
