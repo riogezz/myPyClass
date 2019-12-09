@@ -12,11 +12,11 @@ import logging
 from retrying import retry
 
 
-class elastic(Elasticsearch):
+class Elasticsearch(Elasticsearch):
     logging.getLogger(__name__)
     def __init__(self, *args, **kwargs):
         try:
-            return super(elastic, self).__init__(*args, **kwargs)
+            return super(Elasticsearch, self).__init__(*args, **kwargs)
         except Exception as e:
             logging.critical(str(e))
             raise
