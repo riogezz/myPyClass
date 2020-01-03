@@ -41,5 +41,13 @@ class Elasticsearch(Elasticsearch):
             return self.search(index=index_name, body=query)
         except Exception as e:
             logging.error(str(e))
-
+    
+    @staticmethod        
+    def return_sources(data):
+        data_array = data['hits']['hits']
+        output = []
+        for i in range(1, len(data_array)):
+            output.append(data_array[i]['_source'])
+        return output
+    
     
