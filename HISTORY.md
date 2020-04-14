@@ -1,3 +1,4 @@
+- 0.0.11: fixed elasticsearch write based on wether data is a list or a single value.
 - 0.0.10: added function to retuurn _source data from  elasticsearch queries
 - 0.0.9: renamed elastic class to Elasticsearch
 - 0.0.8: removed 'splauto' (splinter automation) from stable

@@ -25,13 +25,21 @@ class Elasticsearch(Elasticsearch):
     def write(self, index_name, index_type, data, index_id=None ):
         try:
             self.indices.create(index=index_name, ignore=400)
-            for i in range(0,len(data)):
+            if isinstance(data, list):
+                for i in range(0,len(data)):
+                    if index_id==None:
+                        self.index(index=index_name, doc_type=index_type, body={'doc': data[i]})                    
+                        logging.debug(f"writing to {index_name}, {index_type} with data: {data[i]}")
+                    else:
+                        self.update(index=index_name, doc_type=index_type, id=index_id[i], body={'doc': data[i], 'doc_as_upsert': True})
+                        logging.debug(f"writing to {index_name}, {index_type}, id: {index_id[i]} with data: {data[i]}")
+            else:
                 if index_id==None:
-                    self.index(index=index_name, doc_type=index_type, body={'doc': data[i]})                    
-                    logging.debug(f"writing to {index_name}, {index_type} with data: {data[i]}")
+                    self.index(index=index_name, doc_type=index_type, body={'doc': data})                    
+                    logging.debug(f"writing to {index_name}, {index_type} with data: {data}")
                 else:
-                    self.update(index=index_name, doc_type=index_type, id=index_id[i], body={'doc': data[i], 'doc_as_upsert': True})
-                    logging.debug(f"writing to {index_name}, {index_type}, id: {index_id[i]} with data: {data[i]}")
+                    self.update(index=index_name, doc_type=index_type, id=index_id, body={'doc': data, 'doc_as_upsert': True})
+                    logging.debug(f"writing to {index_name}, {index_type}, id: {index_id} with data: {data}")
         except Exception as e:
             logging.error(str(e))
 
